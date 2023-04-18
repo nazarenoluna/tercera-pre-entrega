@@ -75,8 +75,7 @@ header {
 
 .carousel{
     .img_size {
-        height: auto;
-        width: 100%;
+        @include sizes(auto, 100%);
         background-position: center;
         background-size: cover;
     }
@@ -114,12 +113,12 @@ header {
 //Servicios
 
 .servicios{
-    height: auto;
-    width: 100%;
+    @include sizes(auto, 100%);
     background-color: $color-fondo;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: space-around;
+    flex-flow: row wrap;
     text-align: center;
     gap: 20px;
     padding: 20px;
@@ -127,6 +126,7 @@ header {
     .ces{
         border: 5px solid #333;
         border-radius: 5px;
+        padding: 10px;
         i{
             font-size: 50px;
             padding: 15px;
@@ -136,8 +136,7 @@ header {
 
 //Contacto
 h2 {
-    height: auto;
-    width: 100%;
+    @include sizes(auto, 100%);
     background-color: $color-hf;
     font-family: $font2;
     font-size: 50px;
@@ -146,8 +145,7 @@ h2 {
 }
 
 .container-fluid-md {
-    height: auto;
-    width: 100%;
+    @include sizes(100vh, 100%);
     background-color: $color-fondo;
     padding: 20px;
     font-family: $font2;
@@ -161,8 +159,7 @@ h2 {
 
 //fin Contacto
 footer {
-    height: auto;
-    width: 100%;
+    @include sizes(auto, 100%);
     background-color: $color-hf;
     font-size: 20px;
     font-family: $font2;
@@ -182,8 +179,7 @@ footer {
     }
 }
 .subir {
-    height: 40px;
-    width: 40px;
+    @include sizes(40px, 40px);
     background-color: $color-hf;
     color: white;
     border-radius: 50%;
@@ -203,8 +199,7 @@ footer {
 //estilos pagina ofertas
 
 .oferta{
-    height: auto;
-    width: 100%;
+    @include sizes(auto, 100%);
     background-color: $color-fondo;
     display: flex;
     font-family: $font3;
@@ -212,8 +207,7 @@ footer {
     text-align: center;
 
     .descuento{
-        height: 100px;
-        width: 100px;
+        @include sizes(100px, 100px);
         font-size: 90px;
         background-color: $color-fondo;
         animation-name: efecto;
@@ -272,8 +266,7 @@ footer {
     color: white;
 }
 .galeria {
-    width: 100%;
-    height: auto;
+    @include sizes(auto, 100%);
     background-color: $color-fondo;
     display: grid;
     grid-template-columns: 1fr;
@@ -282,8 +275,7 @@ footer {
     grid-gap: 20px;
 }
 .item {
-    width: 100%;
-    height: 620px;
+    @include sizes(600px, 100%);
     background-color: white;
     border: 3px solid black;
     border-radius: 5px;
@@ -293,11 +285,11 @@ footer {
         background-color: white;
         background-size: cover;
         background-position: center;
-        height: 510px;
+        height: 495px;
     }
     .descripcion{
         background-color: white;
-        height: 105px;
+        height: 100px;
         text-align: center;
         
         h4{
@@ -346,6 +338,41 @@ footer {
     background-image: url(./img/pelota-football.jpg);
 }
 
+/*  mediaquery de la pagina index.html  en imagen del carrusel (inicio) */
+
+@media only screen and (min-width: 576px) {
+    .img_size {
+    height: calc(100vh - 160px);
+    }
+}
+
+@media only screen and (min-width: 612px) {
+    .img_size {
+        height: calc(100vh - 114px);
+    }
+}
+
+/*pagina nosotros.html */
+
+@media only screen and (min-width: 300px) {
+    .jumbotron-pagina {
+        height: 100vh;
+        p{
+            height: 200px;
+            overflow-y: scroll;
+        }
+    }
+}
+
+/*paginas nosotros.html */
+
+@media only screen and (min-width: 647px) {
+    .img_size {
+        height: calc(100vh - 114px);
+    }
+}
+
+
 /* mediaquery de la pagina juguetes.html , cambiando los grids */
 
 @media only screen and (min-width: 420px) and (max-width: 791px) {
@@ -363,14 +390,14 @@ footer {
         grid-template-rows: repeat(2, 500px);
         padding: 15px;
         grid-gap: 10px;
-    }
-    
-    .item {
-        height: 500px;
-    }
 
-    .img {
-        height: 380px;
+        .item {
+            height: 500px;
+        }
+    
+        .img {
+            height: 380px;
+        }
     }
 }
 
@@ -381,13 +408,14 @@ footer {
         grid-template-rows: 500px;
         padding: 20px;
         grid-gap: 10px;
-    }
 
-    .item {
-        height: 500px;
-    }
-
-    .img {
-        height: 380px;
+        .item {
+            height: 500px;
+        }
+    
+        .img {
+            height: 380px;
+        }
     }
 }
+
