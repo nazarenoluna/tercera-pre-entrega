@@ -165,8 +165,50 @@ footer .redes a:hover {
   width: 100%;
   background-color: #df89af;
   display: flex;
+  font-family: "Irish Grover", cursive;
   flex-flow: column wrap;
   text-align: center;
+}
+.oferta .descuento {
+  height: 100px;
+  width: 100px;
+  font-size: 90px;
+  background-color: #df89af;
+  animation-name: efecto;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 8s;
+}
+@keyframes efecto {
+  0% {
+    opacity: 1;
+    transform: translateX(-130px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(1300px);
+  }
+}
+.oferta .btn {
+  align-self: center;
+  background-color: rgb(50, 50, 245);
+  font-size: 30px;
+  animation: 2s;
+}
+.oferta .aparecer, .oferta .btn {
+  animation: 2s;
+  animation-name: titila;
+  animation-delay: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes titila {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .espacio {
