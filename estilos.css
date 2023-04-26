@@ -49,10 +49,11 @@ header .bg-color .navbar-nav .nav-link:hover {
 }
 
 .carousel .img_size {
-  height: auto;
+  height: 720px;
   width: 100%;
   background-position: center;
   background-size: cover;
+  object-fit: cover;
 }
 .carousel .mensaje_carousel {
   font-family: "Caveat Brush", cursive;
@@ -63,9 +64,10 @@ header .bg-color .navbar-nav .nav-link:hover {
 
 .jumbotron {
   background-image: linear-gradient(rgba(247, 37, 132, 0.445), rgba(255, 255, 255, 0.445)), url(./img/jugueteria3.jpg);
+  object-fit: cover;
   background-size: cover;
   background-position: center;
-  height: calc(100vh - 40px);
+  height: auto;
   font-family: "Caveat Brush", cursive;
   border-radius: 0;
   color: white;
@@ -110,7 +112,7 @@ h2 {
 }
 
 .container-fluid-md {
-  height: 100vh;
+  height: auto;
   width: 100%;
   background-color: #df89af;
   padding: 20px;
@@ -163,23 +165,22 @@ footer .redes a:hover {
 }
 
 .oferta {
-  height: auto;
+  height: 660px;
   width: 100%;
   background-color: #df89af;
+  background-image: linear-gradient(rgba(247, 37, 132, 0.445), rgba(255, 255, 255, 0.445)), url(./img/jugueteria2.jpg);
   display: flex;
   font-family: "Irish Grover", cursive;
   flex-flow: column wrap;
   text-align: center;
 }
 .oferta .descuento {
-  height: 100px;
-  width: 100px;
-  font-size: 90px;
-  background-color: #df89af;
+  height: 150px;
+  width: 150px;
   animation-name: efecto;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
-  animation-duration: 8s;
+  animation-duration: 7s;
 }
 @keyframes efecto {
   0% {

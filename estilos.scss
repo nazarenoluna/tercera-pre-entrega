@@ -75,9 +75,10 @@ header {
 
 .carousel{
     .img_size {
-        @include sizes(auto, 100%);
+        @include sizes(720px, 100%);
         background-position: center;
         background-size: cover;
+        object-fit: cover;
     }
     
     .mensaje_carousel {
@@ -95,9 +96,10 @@ header {
 
     ),
     url(./img/jugueteria3.jpg);
+    object-fit: cover;
     background-size: cover;
     background-position: center;
-    height: calc(100vh - 40px);
+    height: auto;
     font-family: $font2;
     border-radius: 0;
     color: white;
@@ -145,7 +147,7 @@ h2 {
 }
 
 .container-fluid-md {
-    @include sizes(100vh, 100%);
+    @include sizes(auto, 100%);
     background-color: $color-fondo;
     padding: 20px;
     font-family: $font2;
@@ -199,21 +201,21 @@ footer {
 //estilos pagina ofertas
 
 .oferta{
-    @include sizes(auto, 100%);
+    @include sizes(660px, 100%);
     background-color: $color-fondo;
+    background-image: linear-gradient(($color-jumbotron1), ($color-jumbotron2)), url(./img/jugueteria2.jpg);
     display: flex;
     font-family: $font3;
     flex-flow: column wrap;
     text-align: center;
 
     .descuento{
-        @include sizes(100px, 100px);
-        font-size: 90px;
-        background-color: $color-fondo;
+        @include sizes(150px, 150px);
         animation-name: efecto;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in;
-        animation-duration: 8s;
+        animation-duration: 7s;
+        
 
         @keyframes efecto {
             0%{
